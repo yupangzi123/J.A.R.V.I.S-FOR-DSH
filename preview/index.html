@@ -52,7 +52,10 @@
   </div>
 
   <script>
-    var themeParam = new URLSearchParams(location.search).get('theme') || 'reactor'
+    var qs = new URLSearchParams(location.search)
+    var themeParam = qs.get('theme') || 'reactor'
+    var requireAuth = qs.get('requireInteraction') === '1'
+    var voiceOn = qs.get('voice') !== '0'
     window.__DSH_JARVIS__ = {
       enabled: true,
       mode: 'always',
@@ -61,14 +64,14 @@
       visorBoot: true,
       parallax: 1,
       neuralDensity: 1,
-      requireInteraction: false,
+      requireInteraction: requireAuth,
       allowSkip: true,
       identity: 'LINKS',
       callsign: 'SIR',
       clearance: 'ALPHA',
-      sound: true,
-      ambientHum: true,
-      voice: true,
+      sound: voiceOn,
+      ambientHum: voiceOn,
+      voice: voiceOn,
       glass: true,
       glassOpacity: 0.95,
       glassBlur: 36,
