@@ -19,12 +19,16 @@
   .fake-card { flex: 1; height: 120px; border-radius: 10px; background: #121b22; border: 1px solid #1d2a33; }
   .fake-card.warm { background: #2a2118; border-color: #3a2f22; }
   .fake-note { margin-top: 40px; font-size: 12px; color: #556d7a; }
-  .replay {
+  .controls {
     position: fixed; right: 18px; bottom: 18px; z-index: 10;
-    font: 12px ui-monospace, Menlo, monospace; letter-spacing: .08em;
-    color: #9fc3d4; background: #111a20; border: 1px solid #24333d;
-    padding: 8px 14px; border-radius: 6px; cursor: pointer;
+    display: flex; gap: 8px; flex-wrap: wrap;
   }
+  .ctrl-btn {
+    font: 12px ui-monospace, Menlo, monospace; letter-spacing: .06em;
+    color: #9fc3d4; background: #111a20; border: 1px solid #24333d;
+    padding: 8px 13px; border-radius: 6px; cursor: pointer;
+  }
+  .ctrl-btn:hover { border-color: #5fe3ff; color: #eefbff; }
 </style>
 </head>
 <body>
@@ -36,24 +40,34 @@
       <div class="fake-card warm"></div>
       <div class="fake-card"></div>
     </div>
-    <p class="fake-note">预览页不经过 DSH：配置直接写在下方脚本里。正式使用时由 Host 半侧注入配置。</p>
+    <p class="fake-note">预览页不经过 DSH：可通过右下角按钮切换「冰蓝反应炉 / 马克 III / 复联2纯金」并重播。</p>
   </div>
 
   <div id="dsh-jarvis-root" class="jv-root jv-boot"></div>
-  <button class="replay" onclick="location.reload()">重播</button>
+  <div class="controls">
+    <button class="ctrl-btn" onclick="location.search='?theme=reactor'">冰蓝反应炉</button>
+    <button class="ctrl-btn" onclick="location.search='?theme=mark3'">金色马克 III</button>
+    <button class="ctrl-btn" onclick="location.search='?theme=ultron'">复联2 · 纯金</button>
+    <button class="ctrl-btn" onclick="location.reload()">重播</button>
+  </div>
 
   <script>
+    var themeParam = new URLSearchParams(location.search).get('theme') || 'reactor'
     window.__DSH_JARVIS__ = {
       enabled: true,
       mode: 'always',
-      theme: 'reactor',
+      theme: themeParam,
       speed: 1,
+      visorBoot: true,
+      parallax: 1,
+      neuralDensity: 1,
       requireInteraction: false,
       allowSkip: true,
       identity: 'LINKS',
       callsign: 'SIR',
       clearance: 'ALPHA',
       sound: true,
+      ambientHum: true,
       voice: true,
       glass: true,
       glassOpacity: 0.95,
