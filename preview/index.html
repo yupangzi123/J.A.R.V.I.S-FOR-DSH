@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JARVIS 开机序列 · 预览</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: #0a0f14;
+    color: #cfe6f2;
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+  }
+  .fake-app { max-width: 920px; margin: 0 auto; padding: 56px 32px; }
+  .fake-app h1 { font-weight: 500; font-size: 22px; letter-spacing: .02em; margin: 0 0 8px; }
+  .fake-app p { color: #7d95a3; font-size: 13px; line-height: 1.8; }
+  .fake-row { display: flex; gap: 16px; margin-top: 28px; }
+  .fake-card { flex: 1; height: 120px; border-radius: 10px; background: #121b22; border: 1px solid #1d2a33; }
+  .fake-card.warm { background: #2a2118; border-color: #3a2f22; }
+  .fake-note { margin-top: 40px; font-size: 12px; color: #556d7a; }
+  .replay {
+    position: fixed; right: 18px; bottom: 18px; z-index: 10;
+    font: 12px ui-monospace, Menlo, monospace; letter-spacing: .08em;
+    color: #9fc3d4; background: #111a20; border: 1px solid #24333d;
+    padding: 8px 14px; border-radius: 6px; cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="fake-app">
+    <h1>预览用的宿主界面</h1>
+    <p>这段内容只是用来观察液态玻璃的透光与模糊。开机序列覆盖在它上面，播放结束后自动揭开。</p>
+    <div class="fake-row">
+      <div class="fake-card"></div>
+      <div class="fake-card warm"></div>
+      <div class="fake-card"></div>
+    </div>
+    <p class="fake-note">预览页不经过 DSH：配置直接写在下方脚本里。正式使用时由 Host 半侧注入配置。</p>
+  </div>
+
+  <div id="dsh-jarvis-root" class="jv-root jv-boot"></div>
+  <button class="replay" onclick="location.reload()">重播</button>
+
+  <script>
+    window.__DSH_JARVIS__ = {
+      enabled: true,
+      mode: 'always',
+      theme: 'reactor',
+      speed: 1,
+      requireInteraction: false,
+      allowSkip: true,
+      identity: 'LINKS',
+      callsign: 'SIR',
+      clearance: 'ALPHA',
+      sound: true,
+      voice: false,
+      glass: true,
+      glassOpacity: 0.95,
+      glassBlur: 36,
+      glassSaturate: 145,
+      glassBackdropBlur: 40,
+      scanlines: true
+    }
+  </script>
+  <link rel="stylesheet" href="../lib/splash.css">
+  <script defer src="../lib/splash.js"></script>
+</body>
+</html>

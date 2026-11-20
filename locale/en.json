@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "JARVIS boot sequence",
+    "description": "Plays a holographic JARVIS-style boot sequence over the whole window: arc reactor ignition, HUD assembly, diagnostics, identity check, and a welcome line. Voice uses browser speech synthesis, sound effects are synthesized live, and every line, colour, and timing can be changed in Settings.",
+    "detail": "docs/DETAIL.md"
+  }
+}

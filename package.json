@@ -1,0 +1,55 @@
+{
+  "name": "dsh-jarvis-startup",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 的 JARVIS 式开机序列：方舟反应炉点火 → HUD 构件展开 → 系统自检 → 身份核验 → 欢迎语 → 全息故障揭幕。语音由浏览器 TTS 合成，音效由 WebAudio 现场合成，不含任何影视素材。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "startup",
+    "splash",
+    "boot-animation",
+    "jarvis",
+    "iron-man"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "test",
+    "preview",
+    "docs",
+    "locale",
+    "icon.svg",
+    "README.md",
+    "INSTALL.md",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "test": "node test/smoke-host.mjs && node test/smoke-splash.mjs && node test/smoke-client.mjs"
+  },
+  "license": "MIT",
+  "author": "links",
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}

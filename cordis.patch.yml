@@ -1,0 +1,11 @@
+# dsh-jarvis-startup — DSH bundle patch
+#
+# 把插件的 Host 半侧挂进当前 profile 的配置树；浏览器半侧由 package.json 的
+# dsh.client 声明，宿主按它自动组装 client bundle，这里不用写。
+#
+# 安装（推荐，不手改 profile patch）：
+#   dsh plugin --profile web add /绝对路径/jarvis_start_up
+# 或在 DSH 里用插件管理器安装本目录。
+- insert:
+    - id: dsh-jarvis-startup
+      name: dsh-jarvis-startup

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "JARVIS 开机序列",
+    "description": "在整窗播放一段全息 JARVIS 开机序列：方舟反应炉点火、HUD 构件展开、系统自检、身份核验、欢迎语。语音用浏览器合成，音效现场合成，台词、配色与节奏都能在设置页里改。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}

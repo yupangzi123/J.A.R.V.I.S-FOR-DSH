@@ -1,0 +1,1 @@
+![JARVIS 开机序列：方舟反应炉 HUD、启动日志与进度条](preview.svg)

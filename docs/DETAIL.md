@@ -1,0 +1,1 @@
+![JARVIS boot sequence: arc reactor HUD with boot log and progress bar](preview.svg)

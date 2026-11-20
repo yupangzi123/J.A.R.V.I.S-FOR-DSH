@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="JARVIS 开机序列：方舟反应炉 HUD 与启动进度">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="46%" r="72%">
+      <stop offset="0%" stop-color="#0b1820"/>
+      <stop offset="60%" stop-color="#050b10"/>
+      <stop offset="100%" stop-color="#02050a"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="28%" stop-color="#c9f7ff"/>
+      <stop offset="62%" stop-color="#4fd8ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0a4d63" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5fe3ff"/>
+      <stop offset="100%" stop-color="#ffc46b"/>
+    </linearGradient>
+    <linearGradient id="scope" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5fe3ff" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#5fe3ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="300" fill="url(#bg)"/>
+
+  <g stroke="#5fe3ff" stroke-opacity="0.07" stroke-width="1">
+    <path d="M0 32H640M0 64H640M0 96H640M0 128H640M0 160H640M0 192H640M0 224H640M0 256H640M32 0V300M64 0V300M96 0V300M128 0V300M160 0V300M192 0V300M224 0V300M256 0V300M288 0V300M320 0V300M352 0V300M384 0V300M416 0V300M448 0V300M480 0V300M512 0V300M544 0V300M576 0V300M608 0V300"/>
+  </g>
+
+  <!-- 反应炉 -->
+  <g transform="translate(190 142)">
+    <circle r="96" fill="url(#core)" opacity="0.5"/>
+    <g fill="none" stroke="#5fe3ff">
+      <circle r="92" stroke-width="1.2" stroke-opacity="0.75" stroke-dasharray="120 24" transform="rotate(-14)"/>
+      <circle r="84" stroke-width="1" stroke-opacity="0.3"/>
+      <circle r="76" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="1.5 7"/>
+      <circle r="62" stroke-width="1.2" stroke-opacity="0.5" stroke-dasharray="52 20" transform="rotate(28)"/>
+    </g>
+    <g stroke="#5fe3ff" stroke-opacity="0.6" stroke-width="1">
+      <path d="M0 -90V-98M0 90V98M-90 0H-98M90 0H98M64 -64L69 -69M64 64L69 69M-64 64L-69 69M-64 -64L-69 -69"/>
+    </g>
+    <g fill="none" stroke="#ffc46b" stroke-opacity="0.8" stroke-width="2.4" stroke-linecap="round">
+      <path d="M0 -100A100 100 0 0 1 86.6 50"/>
+    </g>
+    <g fill="none" stroke="#5fe3ff" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round">
+      <path d="M-14 -40A42 42 0 0 1 30 -30"/>
+      <path d="M40 4A42 42 0 0 1 26 38"/>
+      <path d="M-6 42A42 42 0 0 1 -38 18"/>
+      <path d="M-40 -12A42 42 0 0 1 -30 -32" stroke-opacity="0.3"/>
+    </g>
+    <circle r="16" fill="url(#core)"/>
+    <circle r="16" fill="none" stroke="#ffc46b" stroke-opacity="0.6" stroke-width="1"/>
+    <circle r="5.5" fill="#ffffff"/>
+    <circle r="5.5" fill="none" stroke="#bff6ff" stroke-width="1"/>
+  </g>
+
+  <!-- 右侧 HUD：状态行与启动日志 -->
+  <g transform="translate(336 56)">
+    <rect width="188" height="1" fill="#5fe3ff" fill-opacity="0.25"/>
+    <g fill="#5fe3ff" fill-opacity="0.55">
+      <rect y="14" width="46" height="5" rx="2.5"/>
+      <rect y="14" x="72" width="34" height="5" rx="2.5" fill-opacity="0.35"/>
+      <rect y="14" x="128" width="60" height="5" rx="2.5" fill-opacity="0.2"/>
+    </g>
+    <g fill="#dff7ff" fill-opacity="0.72">
+      <rect y="40" width="34" height="2"/>
+      <rect y="40" x="44" width="96" height="2" fill-opacity="0.35"/>
+      <rect y="52" width="52" height="2"/>
+      <rect y="52" x="62" width="70" height="2" fill-opacity="0.28"/>
+      <rect y="64" width="28" height="2"/>
+      <rect y="64" x="38" width="104" height="2" fill-opacity="0.3"/>
+      <rect y="76" width="42" height="2"/>
+      <rect y="76" x="52" width="58" height="2" fill-opacity="0.22"/>
+    </g>
+    <g fill="#ffc46b">
+      <rect y="40" x="152" width="36" height="2" fill-opacity="0.85"/>
+      <rect y="52" x="152" width="22" height="2" fill-opacity="0.6"/>
+      <rect y="64" x="152" width="30" height="2" fill-opacity="0.6"/>
+      <rect y="76" x="152" width="18" height="2" fill-opacity="0.4"/>
+    </g>
+    <g transform="translate(0 108)">
+      <rect width="188" height="2" fill="#dff7ff" fill-opacity="0.12"/>
+      <rect width="132" height="2" fill="url(#line)"/>
+      <path d="M132 -4l4 5-4 5-4-5z" fill="#ffc46b"/>
+      <g fill="#dff7ff" fill-opacity="0.35">
+        <rect y="10" width="1" height="4"/>
+        <rect y="10" x="18" width="1" height="4"/>
+        <rect y="10" x="36" width="1" height="4"/>
+        <rect y="10" x="54" width="1" height="4"/>
+        <rect y="10" x="72" width="1" height="4"/>
+        <rect y="10" x="90" width="1" height="4"/>
+        <rect y="10" x="108" width="1" height="4"/>
+        <rect y="10" x="126" width="1" height="4"/>
+        <rect y="10" x="144" width="1" height="4"/>
+        <rect y="10" x="162" width="1" height="4"/>
+        <rect y="10" x="180" width="1" height="4"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 顶部与底部 HUD 角标 -->
+  <g stroke="#5fe3ff" stroke-opacity="0.45" stroke-width="1" fill="none">
+    <path d="M16 30V16h14M610 16h14v14M16 270v14h14M624 270v14h-14"/>
+  </g>
+  <g fill="#5fe3ff" fill-opacity="0.6">
+    <rect x="40" y="24" width="58" height="3"/>
+    <rect x="40" y="33" width="38" height="3" fill-opacity="0.35"/>
+  </g>
+  <g fill="#dff7ff" fill-opacity="0.5">
+    <rect x="40" y="262" width="86" height="2"/>
+    <rect x="40" y="270" width="52" height="2" fill-opacity="0.3"/>
+  </g>
+  <g fill="#5fe3ff" fill-opacity="0.4">
+    <rect x="548" y="262" width="52" height="2"/>
+    <rect x="568" y="270" width="32" height="2" fill-opacity="0.25"/>
+  </g>
+
+  <rect width="640" height="300" fill="url(#scope)"/>
+</svg>
