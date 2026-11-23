@@ -6,9 +6,15 @@ DeepSeek Harness 的 JARVIS 式电影级 3D 全息开机序列插件：冷启动
 > 视觉参考《钢铁侠》与《复仇者联盟2》中的装甲面甲 HUD、3D 意识神经网络与 JARVIS 的管家语气。**不含任何影视音视频素材**：
 > 全屏 3D 投影与 HUD 图形由原生 Canvas 2D 现场绘制，音效与低频反应炉底噪由 WebAudio 合成，台词由浏览器语音合成念出。
 
-| 自检 | 身份核验 | 欢迎 |
-|---|---|---|
-| ![启动自检](docs/screenshots/boot.png) | ![身份核验](docs/screenshots/identity.png) | ![欢迎回来](docs/screenshots/welcome.png) |
+| 面甲展开 · 光学对焦 | 身份核验 · 生物扫描 |
+|---|---|
+| ![上下钛金面甲展开与镜头对焦](docs/screenshots/visor.png) | ![双扫描弧与 AUTHENTICATE 按钮](docs/screenshots/identity.png) |
+
+| 系统自检 · 3D 神经网络核心 | 终幕 · 欢迎回来 |
+|---|---|
+| ![3D 神经球、曲面侧翼与启动日志](docs/screenshots/boot.png) | ![WELCOME BACK 与身份名称](docs/screenshots/welcome.png) |
+
+> 截图取自本仓库的 `preview/index.html`（冰蓝反应炉主题，1440×900），不是效果图。
 
 ## 播放序列
 
@@ -34,6 +40,17 @@ DeepSeek Harness 的 JARVIS 式电影级 3D 全息开机序列插件：冷启动
 - **液态玻璃**：底衬可切换为半透明磨砂层，玻璃不透明度、磨砂模糊、饱和度与背景模糊各自独立可调。
 - **三十余项设置**：身份、称呼、权限等级、面甲开场、3D 视差强度、神经网络密度、环境底噪、语音参数、配色与显示模式均可在设置页调整，即改即存。
 - **尊重系统偏好与防黑屏兜底**：`prefers-reduced-motion` 下跳过动态直接展示终幕；若运行时加载失败，首屏注入的兜底脚本 10 秒后无条件放行页面。
+
+## 三套主题
+
+| 冰蓝反应炉（默认） | 金色马克 III | 复联2 · 纯金意识球 |
+|---|---|---|
+| `#5fe3ff` + `#ffc46b` | `#ffc46b` + `#8fe9ff` | `#ffb830` + `#fff0a8` |
+
+选主题会把主副色一起换掉；之后仍可在设置页的「视觉与 3D 全息」里单独改任意颜色。
+下面这张是 `ultron` 主题：
+
+![复联2 · 纯金意识球主题的自检画面](docs/screenshots/gold.png)
 
 ## 安装
 
